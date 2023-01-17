@@ -1,0 +1,132 @@
+@use 'variables' as v;
+.single-poke{
+    margin-top: 2rem;
+    width: 50rem;
+    height: 32rem;
+    border-radius: 35px;
+    background-color: v.$Card ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px ;
+
+    &_nav{
+        width: 90%;
+        display: flex;
+        background-color: v.$Card ;
+        margin-bottom: 25px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_type{
+        background-color: v.$Fire;
+        margin-top: 5px;
+        padding: 10px 90px;
+        border-radius: 15px;
+        
+    }
+    &_title{
+    background-color: v.$Card ;
+    color: #e0e1da;
+    font-weight: bold;
+    letter-spacing: 3px;
+    }
+    &_number{
+    background-color: v.$Card ;
+    color: #8e8e8f;
+    letter-spacing: 4px;
+    font-size: 1.1em;
+
+    }
+    &_body{
+        background-color: v.$Card;
+        width: 100%;
+        height: 65%;
+        display: flex;
+        gap: 6rem;
+        align-items: center;
+        justify-content: space-evenly;
+        @media(max-width: 550px){
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+    &_img{
+    background-color: v.$Card ;
+    width: 18rem;
+    margin: 0;
+    @media(max-width: 550px){
+        width: 12rem;
+        margin-top: 55px;
+    }
+    }
+    &_details{
+        background-color: v.$Card;
+        letter-spacing: 1px;
+       
+        
+        &-abilitys {
+            background-color: v.$Card;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+            
+            
+            h4{
+            background-color: v.$Card;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: -6px;
+            }
+            li{
+            list-style: none;
+            background-color: v.$Card;
+            font-size: 1.1em;
+            background-color: v.$Fire;
+            padding: 1px;
+            border-radius: 10px;
+            }
+            
+        }
+        &-stats{
+            margin-top: 45px;
+            background-color: v.$Card;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            gap: 2px;
+            p, span, div{
+            background-color: v.$Card;
+            margin: 0;
+            padding-left: 15px;
+            }
+            p{
+                font-size: 1.8em;
+            }
+            span{
+                font-size: 1.1em;
+                color: v.$Fire;
+                
+            }
+        }
+    
+    }
+    
+    
+}
+.home {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border: none;
+    i{
+        font-size: 50px;
+        background-color: transparent;
+    color: #e0e1da;
+    
+
+    }
+}
+

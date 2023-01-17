@@ -1,0 +1,45 @@
+@use 'variables' as v;
+.card-poke {
+    margin-top: 2rem;
+    width: 25rem;
+    height: 32rem;
+    border-radius: 35px;
+    background-color: v.$Card ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px ;
+    &_title{
+    background-color: v.$Card ;
+    color: #e0e1da;
+    font-weight: bold;
+    letter-spacing: 3px;
+    }
+    &_number{
+    background-color: v.$Card ;
+    color: #8e8e8f;
+    letter-spacing: 4px;
+    font-size: 1.1em;
+
+    }
+    &_img{
+    background-color: v.$Card ;
+    width: 20rem;
+    
+
+    }
+    &_button{
+    background-color: v.$Fire ;
+    margin-top: 40px;
+    padding:10px 25px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    letter-spacing: 3px;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: #e0e1da;
+    text-align: center;
+    }    
+}
+
