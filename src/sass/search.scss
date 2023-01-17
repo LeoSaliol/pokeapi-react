@@ -1,0 +1,23 @@
+input{
+    
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 15px 0 0 15px;
+    background-color: #f1f1f1;
+    color: #1d2633;
+    width: 30%;
+    @media(max-width:991px){
+        width: 50%;
+        
+    }
+}
+i{
+    background-color: #f1f1f1;
+    color: #0a0b0e;
+    font-size: 29px;
+    padding-right: 15px;
+    width: 40px;
+    border-radius: 0 15px 15px 0;
+    
+}
