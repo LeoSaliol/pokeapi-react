@@ -1,0 +1,6 @@
+@use  "variables" as v;
+
+*{
+    background-color: v.$BackgroundColor;
+    color: #f7f7f7;
+}
