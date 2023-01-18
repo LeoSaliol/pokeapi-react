@@ -2,10 +2,21 @@ import "../sass/card.scss";
 import { Link } from "react-router-dom";
 
 import { useLoaderData } from "react-router-dom";
+import { useEffect } from "react";
 
 export const CardPokemon = () => {
     const { pokemons } = useLoaderData();
     const arrPokemons = pokemons.results;
+
+    useEffect(() => {
+        const promises = pokemons.results.map(async (pokemon) => {
+            const res = await fetch(pokemon.url);
+            const data = await res.json();
+            return data;
+        });
+        const results = Promise.all(promises);
+        console.log(results);
+    }, []);
 
     return (
         <>
@@ -41,5 +52,6 @@ export const CardPokemon = () => {
 export const loaderPokemons = async () => {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon");
     const pokemons = await res.json();
+
     return { pokemons };
 };
