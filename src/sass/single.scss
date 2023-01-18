@@ -11,7 +11,7 @@
     padding: 25px ;
 
     &_nav{
-        width: 90%;
+        width: 95%;
         display: flex;
         background-color: v.$Card ;
         margin-bottom: 25px;
@@ -23,6 +23,7 @@
         margin-top: 5px;
         padding: 10px 90px;
         border-radius: 15px;
+        text-transform: capitalize;
         
     }
     &_title{
@@ -30,6 +31,7 @@
     color: #e0e1da;
     font-weight: bold;
     letter-spacing: 3px;
+    text-transform: capitalize;
     }
     &_number{
     background-color: v.$Card ;
@@ -50,16 +52,17 @@
             flex-direction: column;
             gap: 2rem;
         }
+        &-img{
+            max-width: 19rem;
+        background-color: v.$Card;
+
+            @media(max-width: 550px){
+                width: 12rem;
+                margin-top: 55px;
+            }
+        }
     }
-    &_img{
-    background-color: v.$Card ;
-    width: 18rem;
-    margin: 0;
-    @media(max-width: 550px){
-        width: 12rem;
-        margin-top: 55px;
-    }
-    }
+   
     &_details{
         background-color: v.$Card;
         letter-spacing: 1px;
@@ -73,7 +76,10 @@
             text-align: center;
             gap: 15px;
             
-            
+            span{
+            background-color: v.$Card;
+
+            }
             h4{
             background-color: v.$Card;
             font-size: 1.8em;
@@ -87,6 +93,8 @@
             background-color: v.$Fire;
             padding: 1px;
             border-radius: 10px;
+    text-transform: capitalize;
+
             }
             
         }

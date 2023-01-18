@@ -1,41 +1,51 @@
 import "../sass/single.scss";
 import { Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+
 const SinglePokemon = () => {
+    const { pokemon } = useLoaderData();
+
     return (
         <>
             <article className="d-flex gap-5 flex-wrap justify-content-center">
                 <div className="single-poke">
                     <div className="single-poke_nav">
-                        <h3 className="single-poke_title">Ditto</h3>
-                        <p className="single-poke_type">Type</p>
+                        <h3 className="single-poke_title"> {pokemon.name} </h3>
+                        <p className="single-poke_type">
+                            {" "}
+                            {pokemon.types[0].type.name}{" "}
+                        </p>
                     </div>
                     <div className="single-poke_body">
                         <img
-                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg"
-                            className="img-fluid single-poke_img"
+                            src={
+                                pokemon.sprites.other.dream_world.front_default
+                            }
                             alt="..."
+                            className="single-poke_body-img"
                         />
 
                         <div className="single-poke_details">
                             <div className="single-poke_details-abilitys">
                                 <h4>Habilidades</h4>
-
-                                <li>habilidad</li>
-
-                                <li>habilidad</li>
+                                {pokemon.abilities.map((a, index) => (
+                                    <span key={index}>
+                                        <li>{a.ability.name}</li>
+                                    </span>
+                                ))}
                             </div>
                             <div className="single-poke_details-stats">
                                 <div>
                                     <p>Hp</p>
-                                    <span>1</span>
+                                    <span>{pokemon.stats[0].base_stat}</span>
                                 </div>
                                 <div>
                                     <p>Atq</p>
-                                    <span>2</span>
+                                    <span>{pokemon.stats[1].base_stat}</span>
                                 </div>
                                 <div>
                                     <p>Def</p>
-                                    <span>3</span>
+                                    <span>{pokemon.stats[2].base_stat}</span>
                                 </div>
                             </div>
                         </div>
@@ -50,3 +60,9 @@ const SinglePokemon = () => {
 };
 
 export default SinglePokemon;
+
+export const loaderPoke = async ({ params }) => {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}`);
+    const pokemon = await res.json();
+    return { pokemon };
+};
