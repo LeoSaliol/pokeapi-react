@@ -2,20 +2,27 @@ import "../sass/card.scss";
 import { Link } from "react-router-dom";
 
 import { useLoaderData } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const CardPokemon = () => {
+    const [imgPoke, setImgPoke] = useState([]);
+
     const { pokemons } = useLoaderData();
     const arrPokemons = pokemons.results;
 
-    useEffect(() => {
+    const getImgs = async () => {
         const promises = pokemons.results.map(async (pokemon) => {
             const res = await fetch(pokemon.url);
             const data = await res.json();
             return data;
         });
-        const results = Promise.all(promises);
+        const results = await Promise.all(promises);
         console.log(results);
+        setImgPoke(results);
+    };
+
+    useEffect(() => {
+        getImgs();
     }, []);
 
     return (
@@ -32,7 +39,7 @@ export const CardPokemon = () => {
                                 className="img-fluid card-poke_img"
                                 alt="Pokemons"
                             />
-
+                            <p> </p>
                             <Link
                                 to={`/pokemon/${index + 1}`}
                                 className="card-poke_button"
