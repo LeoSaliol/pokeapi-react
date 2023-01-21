@@ -1,0 +1,33 @@
+@use 'variables' as v;
+
+//* Stasts
+.hp{
+    color: #16c2d5;
+
+}
+.atq{
+    color: #ff3939;
+}
+.def{
+    color: #fdfd96;
+}
+
+//* Types styles
+.grass{
+    background-color: v.$Grass;
+    color: v.$Card;
+}
+.fire{
+    background-color: v.$Fire;
+    color: v.$Card;
+}
+
+.water{
+    background-color: v.$Water;
+    color: v.$White;
+}
+.bug{
+    background-color: v.$Bug;
+    color: v.$White;
+    
+}

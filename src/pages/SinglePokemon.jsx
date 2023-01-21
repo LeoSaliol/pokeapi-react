@@ -11,7 +11,9 @@ const SinglePokemon = () => {
                 <div className="single-poke">
                     <div className="single-poke_nav">
                         <h3 className="single-poke_title"> {pokemon.name} </h3>
-                        <p className="single-poke_type">
+                        <p
+                            className={`single-poke_type ${pokemon.types[0].type.name}`}
+                        >
                             {" "}
                             {pokemon.types[0].type.name}{" "}
                         </p>
@@ -30,22 +32,34 @@ const SinglePokemon = () => {
                                 <h4>Habilidades</h4>
                                 {pokemon.abilities.map((a, index) => (
                                     <span key={index}>
-                                        <li>{a.ability.name}</li>
+                                        <li
+                                            className={
+                                                pokemon.types[0].type.name
+                                            }
+                                        >
+                                            {a.ability.name}
+                                        </li>
                                     </span>
                                 ))}
                             </div>
                             <div className="single-poke_details-stats">
                                 <div>
                                     <p>Hp</p>
-                                    <span>{pokemon.stats[0].base_stat}</span>
+                                    <span className="hp">
+                                        {pokemon.stats[0].base_stat}
+                                    </span>
                                 </div>
                                 <div>
                                     <p>Atq</p>
-                                    <span>{pokemon.stats[1].base_stat}</span>
+                                    <span className="atq">
+                                        {pokemon.stats[1].base_stat}
+                                    </span>
                                 </div>
                                 <div>
                                     <p>Def</p>
-                                    <span>{pokemon.stats[2].base_stat}</span>
+                                    <span className="def">
+                                        {pokemon.stats[2].base_stat}
+                                    </span>
                                 </div>
                             </div>
                         </div>
