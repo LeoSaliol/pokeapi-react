@@ -1,14 +1,15 @@
 @use 'variables' as v;
 .card-poke {
     margin-top: 2rem;
-    width: 25rem;
-    height: 32rem;
+    max-width: 25rem;
+    max-height: 32rem;
     border-radius: 35px;
     background-color: v.$Card ;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 25px ;
+    text-transform: capitalize;
     &_title{
     background-color: v.$Card ;
     color: #e0e1da;
@@ -24,13 +25,14 @@
     }
     &_img{
     background-color: v.$Card ;
-    width: 20rem;
+    max-width: 15rem;
+    
     
 
     }
     &_button{
     background-color: v.$Fire ;
-    margin-top: 40px;
+    
     padding:10px 25px;
     width: 100%;
     border-radius: 15px;

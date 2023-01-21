@@ -29,19 +29,21 @@ export const CardPokemon = () => {
         <>
             {" "}
             <div className="d-flex gap-5 flex-wrap justify-content-center">
-                {arrPokemons.length > 0 ? (
-                    arrPokemons.map((poke, index) => (
-                        <div key={index} className="card-poke">
+                {imgPoke.length > 0 ? (
+                    imgPoke.map((poke) => (
+                        <div key={poke.id} className="card-poke">
                             <h3 className="card-poke_title"> {poke.name} </h3>
-                            <p className="card-poke_number"># {index + 1} </p>
+                            <p className="card-poke_number"># {poke.id} </p>
                             <img
-                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg"
-                                className="img-fluid card-poke_img"
+                                src={
+                                    poke.sprites.other.dream_world.front_default
+                                }
+                                className="card-poke_img"
                                 alt="Pokemons"
                             />
                             <p> </p>
                             <Link
-                                to={`/pokemon/${index + 1}`}
+                                to={`/pokemon/${poke.id}`}
                                 className="card-poke_button"
                             >
                                 Fire
@@ -57,7 +59,9 @@ export const CardPokemon = () => {
 };
 
 export const loaderPokemons = async () => {
-    const res = await fetch("https://pokeapi.co/api/v2/pokemon");
+    const res = await fetch(
+        "https://pokeapi.co/api/v2/pokemon?limit=12&offset=0"
+    );
     const pokemons = await res.json();
 
     return { pokemons };
