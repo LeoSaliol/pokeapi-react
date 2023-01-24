@@ -68,37 +68,39 @@
                 gap: 1.5rem;
         }
         &-img{
-            max-width: 19rem;
-        background-color: v.$Card;
-
+            max-width: 17rem;
+            background-color: transparent;
+            padding-top: 5px;
             @media(max-width: 550px){
                 max-width: 10rem;
-                margin-top: 55px;
+                padding-top: 50px;
             }
             
         }
     }
    
     &_details{
-        background-color: v.$Card;
+        background-color: transparent;
         letter-spacing: 1px;
+        
        
         
         &-abilitys {
-            background-color: v.$Card;
+            background-color: transparent;
             margin: 0;
             display: flex;
             flex-direction: column;
             text-align: center;
             gap: 15px;
+
             
             span{
-            background-color: v.$Card;
+            background-color: transparent;
             
 
             }
             h4{
-            background-color: v.$Card;
+            background-color: transparent;
             font-size: 1.8em;
             font-weight: 600;
             margin-bottom: -6px;
@@ -117,15 +119,20 @@
         }
         &-stats{
             margin-top: 45px;
-            background-color: v.$Card;
+            background-color: transparent;
             text-align: center;
             display: flex;
             justify-content: space-between;
             gap: 2px;
             padding-right: 12px;
+            @media(max-width: 550px){
+                gap: 0;
+                margin-top: 0;
+                padding-top: 1px;
+            }
             p, span, div{
             
-            background-color: v.$Card;
+            background-color: transparent;
             margin: 0;
             padding-left: 15px;
             }
@@ -150,6 +157,8 @@
     top: 5%;
     left: 5%;
     border: none;
+    background-color: transparent;
+
     i{
     font-size: 50px;
     background-color: transparent;
@@ -160,6 +169,7 @@
         left: 3%;
      i{
         font-size: 32px;
+    
         
      }           
     }
