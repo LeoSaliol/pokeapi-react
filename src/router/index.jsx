@@ -2,8 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import LayoutPublic from "../layout/LayoutPublic";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/Home";
-import SinglePokemon, { loaderPoke } from "../pages/SinglePokemon";
+import SinglePagePokemon from "../pages/SinglePagePokemon";
 import { loaderPokemons } from "../components/CardPokemon";
+import { loaderPoke } from "../components/SinglePokemon";
 
 export const router = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
 
             {
                 path: "/pokemon/:id",
-                element: <SinglePokemon />,
+                element: <SinglePagePokemon />,
                 loader: loaderPoke,
             },
         ],

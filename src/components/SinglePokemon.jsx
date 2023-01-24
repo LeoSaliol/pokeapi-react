@@ -2,15 +2,16 @@ import "../sass/single.scss";
 import { Link } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 
-const SinglePokemon = () => {
+export const SinglePokemon = () => {
     const { pokemon } = useLoaderData();
-
     return (
         <>
             <article className="d-flex gap-5 flex-wrap justify-content-center">
                 <div className="single-poke">
                     <div className="single-poke_nav">
-                        <h3 className="single-poke_title"> {pokemon.name} </h3>
+                        {/* //? Pokemon NAME */}
+                        <h3 className="single-poke_name"> {pokemon.name} </h3>
+                        {/* //? Pokemon TYPE */}
                         <p
                             className={`single-poke_type ${pokemon.types[0].type.name}`}
                         >
@@ -18,7 +19,9 @@ const SinglePokemon = () => {
                             {pokemon.types[0].type.name}{" "}
                         </p>
                     </div>
+
                     <div className="single-poke_body">
+                        {/* //? Pokemon IMAGEN */}
                         <img
                             src={
                                 pokemon.sprites.other.dream_world.front_default
@@ -26,8 +29,8 @@ const SinglePokemon = () => {
                             alt="..."
                             className="single-poke_body-img"
                         />
-
                         <div className="single-poke_details">
+                            {/* //? Pokemon HABILIDADES */}
                             <div className="single-poke_details-abilitys">
                                 <h4>Habilidades</h4>
                                 {pokemon.abilities.map((a, index) => (
@@ -42,6 +45,7 @@ const SinglePokemon = () => {
                                     </span>
                                 ))}
                             </div>
+                            {/* //? Pokemon STATS */}
                             <div className="single-poke_details-stats">
                                 <div>
                                     <p>Hp</p>

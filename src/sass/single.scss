@@ -10,7 +10,11 @@
     flex-direction: column;
     align-items: center;
     padding: 25px ;
-
+    @media((min-width: 551px ) and (max-width: 853px)){
+      
+     width: 35rem;          
+    }
+    
     &_nav{
         width: 95%;
         display: flex;
@@ -27,14 +31,19 @@
         border-radius: 15px;
         text-transform: capitalize;
         letter-spacing: 3px;
+        @media(max-width: 550px){
+                padding: 10px 50px;
+        }
+        
         
     }
-    &_title{
+    &_name{
     background-color: v.$Card ;
     color: v.$White;
     font-weight: bold;
     letter-spacing: 3px;
     text-transform: capitalize;
+    
     }
     &_number{
     background-color: v.$Card ;
@@ -55,14 +64,18 @@
             flex-direction: column;
             gap: 2rem;
         }
+        @media((min-width: 551px ) and (max-width: 853px)){
+                gap: 1.5rem;
+        }
         &-img{
             max-width: 19rem;
         background-color: v.$Card;
 
             @media(max-width: 550px){
-                width: 12rem;
+                max-width: 10rem;
                 margin-top: 55px;
             }
+            
         }
     }
    
@@ -138,11 +151,25 @@
     left: 5%;
     border: none;
     i{
-        font-size: 50px;
-        background-color: transparent;
+    font-size: 50px;
+    background-color: transparent;
     color: #e0e1da;
-    
+    }
+    @media(max-width: 550px){
+        top: 2%;
+        left: 3%;
+     i{
+        font-size: 32px;
+        
+     }           
+    }
 
+    @media((min-width: 551px ) and (max-width: 853px)){
+        top: 2%;
+        left: 3%;
+    i{
+        font-size: 35px;
+    }
     }
 }
 
