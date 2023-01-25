@@ -2,13 +2,9 @@ import "../sass/card.scss";
 import { Link } from "react-router-dom";
 
 import { useLoaderData } from "react-router-dom";
-import { useEffect } from "react";
 
 export const CardPokemon = () => {
     const { pokemons } = useLoaderData();
-    useEffect(() => {
-        console.log(pokemons[0].types[1].type.name);
-    }, []);
 
     return (
         <>

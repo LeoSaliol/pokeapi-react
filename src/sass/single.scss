@@ -14,6 +14,11 @@
       
      width: 35rem;          
     }
+    @media(max-width: 480px){
+        padding: 9px 1px;
+        width: 20rem;
+        
+    }
     
     &_nav{
         width: 95%;
@@ -22,17 +27,45 @@
         margin-bottom: 25px;
         justify-content: space-between;
         align-items: center;
+        @media(max-width: 480px){
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+    }
     }
     &_type{
+        width: 17.5rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
         font-size: 1.2em;
         font-weight: 600;
         margin-top: 5px;
-        padding: 10px 90px;
+        margin-bottom: 0;
         border-radius: 15px;
         text-transform: capitalize;
         letter-spacing: 3px;
+        &-text{
+          width: 100%;
+        padding: 15px 0px;
         @media(max-width: 550px){
-                padding: 10px 50px;
+            padding: 10px 0px;
+        }
+        @media(max-width: 480px){
+            padding: 5px;
+           
+        }
+            
+        }
+        @media(max-width: 550px){
+                width: 15rem;
+                margin-top: 0;
+        }
+        @media(max-width: 480px){
+            width: 12rem;
+            font-size: 1em;
+           
         }
         
         
@@ -43,6 +76,15 @@
     font-weight: bold;
     letter-spacing: 3px;
     text-transform: capitalize;
+    margin-top: 20px;
+    @media(max-width: 550px){
+        margin-top: 10px;
+    }
+    @media(max-width: 480px){
+        font-size: 1.2em;
+        
+    }
+
     
     }
     &_number{

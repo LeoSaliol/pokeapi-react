@@ -12,11 +12,15 @@ export const SinglePokemon = () => {
                         {/* //? Pokemon NAME */}
                         <h3 className="single-poke_name"> {pokemon.name} </h3>
                         {/* //? Pokemon TYPE */}
-                        <p
-                            className={`single-poke_type ${pokemon.types[0].type.name}`}
-                        >
-                            {" "}
-                            {pokemon.types[0].type.name}{" "}
+                        <p className={`single-poke_type `}>
+                            {pokemon.types.map((i) => (
+                                <p
+                                    key={i.slot}
+                                    className={`single-poke_type-text ${i.type.name}`}
+                                >
+                                    {i.type.name}
+                                </p>
+                            ))}
                         </p>
                     </div>
 

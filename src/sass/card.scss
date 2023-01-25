@@ -23,7 +23,7 @@
     color: #8e8e8f;
     letter-spacing: 4px;
     font-size: 1.1em;
-
+    overflow: hidden;
     }
     &_img{
     background-color: v.$Card ;
@@ -33,7 +33,7 @@
 
     }
     &_button{
-    background-color: red;
+   
     width: 100%;
     text-align: center;
     border-radius: 15px;
