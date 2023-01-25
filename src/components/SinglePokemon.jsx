@@ -12,7 +12,7 @@ export const SinglePokemon = () => {
                         {/* //? Pokemon NAME */}
                         <h3 className="single-poke_name"> {pokemon.name} </h3>
                         {/* //? Pokemon TYPE */}
-                        <p className={`single-poke_type `}>
+                        <div className={`single-poke_type `}>
                             {pokemon.types.map((i) => (
                                 <p
                                     key={i.slot}
@@ -21,7 +21,7 @@ export const SinglePokemon = () => {
                                     {i.type.name}
                                 </p>
                             ))}
-                        </p>
+                        </div>
                     </div>
 
                     <div className="single-poke_body">

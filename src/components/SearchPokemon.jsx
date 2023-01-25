@@ -24,7 +24,7 @@ const SearchPokemon = () => {
     const getName = (e) => {
         e.preventDefault();
         getPokemon(namePoke.toLowerCase());
-        e.target.reset();
+
         setNamePoke("");
     };
     return (
@@ -38,7 +38,7 @@ const SearchPokemon = () => {
                     placeholder="Find Pokemon"
                     onChange={(e) => setNamePoke(e.target.value)}
                 />
-                <i className="bi bi-search"></i>
+                <i className="bi bi-search" onClick={(e) => getName(e)}></i>
             </form>
         </div>
     );

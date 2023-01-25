@@ -15,11 +15,13 @@
 //* Types styles
 .grass{
     background-color: v.$Grass;
-    color: v.$Card;
+    color: v.$Black;
+
 }
 .fire{
     background-color: v.$Fire;
-    color: v.$Card;
+    color: v.$Black;
+
 }
 
 .water{
@@ -37,14 +39,20 @@
 }
 .fighting{
     background-color: v.$Fighting;
+    color: v.$White;
+
     
 }
 .flying{
     background-color: v.$Flying;
+    color: v.$Black;
+
+
     
 }
 .poison{
     background-color: v.$Poison;
+    color: v.$White;
     
 }
 .ground{
@@ -54,9 +62,13 @@
 }
 .rock{
     background-color: v.$Rock;
+    color: v.$White;
+
 }
 .ghost{
     background-color: v.$Ghost;
+    color: v.$White;
+
 }
 .steel{
     background-color: v.$Steel;
@@ -70,6 +82,8 @@
 }
 .psychic{
     background-color: v.$Psychic;
+    color: v.$White;
+
 }
 .ice{
     background-color: v.$Ice;
@@ -78,10 +92,14 @@
 }
 .dragon{
     background-color: v.$Dragon;
+    color: v.$White;
+
     
 }
 .dark{
     background-color: v.$Dark;
+    color: v.$White;
+
 }
 .fairy{
     background-color: v.$Fairy;

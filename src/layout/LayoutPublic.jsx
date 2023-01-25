@@ -6,10 +6,10 @@ import "../sass/index.scss";
 const LayoutPublic = () => {
     return (
         <>
-            <div className="container text-center">
+            <div className="container text-center ">
                 <Logo />
             </div>
-            <section className="container">
+            <section>
                 <Outlet />
             </section>
             <Footer />

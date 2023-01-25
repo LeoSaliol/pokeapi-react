@@ -1,11 +1,19 @@
 import { CardPokemon } from "../components/CardPokemon";
 import SearchPokemon from "../components/SearchPokemon";
+import TypesPagesPokemons from "./TypesPagesPokemons";
 
 const Home = () => {
     return (
         <>
-            <SearchPokemon />
-            <CardPokemon />
+            <div className="container">
+                <SearchPokemon />
+            </div>
+
+            <TypesPagesPokemons />
+
+            <div className="container ">
+                <CardPokemon />
+            </div>
         </>
     );
 };

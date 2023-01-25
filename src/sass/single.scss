@@ -48,8 +48,11 @@
         letter-spacing: 3px;
         &-text{
           width: 100%;
+          margin-bottom: 0;
         padding: 15px 0px;
+        
         @media(max-width: 550px){
+            
             padding: 10px 0px;
         }
         @media(max-width: 480px){
