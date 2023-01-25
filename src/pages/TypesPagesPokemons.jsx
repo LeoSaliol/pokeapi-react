@@ -11,7 +11,7 @@ const TypesPagesPokemons = () => {
             <button onClick={changeModal}>Tipos de Pokemones</button>
             {modal && (
                 <>
-                    <span onClick={changeModal}></span>
+                    <span className="modal-back" onClick={changeModal}></span>
                     <TypesPokemons changeModal={changeModal} />
                 </>
             )}
