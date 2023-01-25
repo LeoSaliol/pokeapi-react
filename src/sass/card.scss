@@ -33,17 +33,26 @@
 
     }
     &_button{
-    
-    
-    padding:10px 25px;
+    background-color: red;
     width: 100%;
+    text-align: center;
     border-radius: 15px;
     border: none;
     letter-spacing: 3px;
     font-size: 1.4em;
     text-decoration: none;
-   
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 12px;
+    &-text{
+        width: 100%;
+        margin-bottom: 0;
+        padding-left: 15px;
+        padding: 8px 7px;
+
+    }
     }    
 }
 

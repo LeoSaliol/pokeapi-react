@@ -2,9 +2,13 @@ import "../sass/card.scss";
 import { Link } from "react-router-dom";
 
 import { useLoaderData } from "react-router-dom";
+import { useEffect } from "react";
 
 export const CardPokemon = () => {
     const { pokemons } = useLoaderData();
+    useEffect(() => {
+        console.log(pokemons[0].types[1].type.name);
+    }, []);
 
     return (
         <>
@@ -15,6 +19,7 @@ export const CardPokemon = () => {
                         <div key={poke.id} className="card-poke">
                             <h3 className="card-poke_title"> {poke.name} </h3>
                             <p className="card-poke_number"># {poke.id} </p>
+
                             <img
                                 src={
                                     poke.sprites.other.dream_world.front_default
@@ -22,12 +27,20 @@ export const CardPokemon = () => {
                                 className="card-poke_img"
                                 alt="Pokemons"
                             />
-                            <p> </p>
+
                             <Link
                                 to={`/pokemon/${poke.id}`}
-                                className={`card-poke_button ${poke.types[0].type.name}`}
+                                className={`card-poke_button `}
                             >
-                                {poke.types[0].type.name}
+                                {poke.types.map((i) => (
+                                    <p
+                                        key={i.slot}
+                                        className={`card-poke_button-text ${i.type.name}`}
+                                    >
+                                        {" "}
+                                        {i.type.name}{" "}
+                                    </p>
+                                ))}
                             </Link>
                         </div>
                     ))
