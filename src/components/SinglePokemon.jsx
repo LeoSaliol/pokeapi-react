@@ -14,12 +14,13 @@ export const SinglePokemon = () => {
                         {/* //? Pokemon TYPE */}
                         <div className={`single-poke_type `}>
                             {pokemon.types.map((i) => (
-                                <p
+                                <Link
                                     key={i.slot}
                                     className={`single-poke_type-text ${i.type.name}`}
+                                    to={`/type/${i.type.name}`}
                                 >
                                     {i.type.name}
-                                </p>
+                                </Link>
                             ))}
                         </div>
                     </div>

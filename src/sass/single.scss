@@ -47,9 +47,10 @@
         text-transform: capitalize;
         letter-spacing: 3px;
         &-text{
-          width: 100%;
-          margin-bottom: 0;
-        padding: 15px 0px;
+            width: 100%;
+            margin-bottom: 0;
+            padding: 15px 0px;
+            text-decoration: none;
         
         @media(max-width: 550px){
             
@@ -116,6 +117,7 @@
             max-width: 17rem;
             max-height: 24rem;
             background-color: transparent;
+            
             padding-top: 5px;
             @media(max-width: 550px){
                 max-width: 10rem;

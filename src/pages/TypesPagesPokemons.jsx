@@ -8,7 +8,7 @@ const TypesPagesPokemons = () => {
     };
     return (
         <div className="container-fluid ">
-            <button onClick={changeModal}>Tipos de Pokemones</button>
+            <button onClick={changeModal}>TYPES</button>
             {modal && (
                 <>
                     <span className="modal-back" onClick={changeModal}></span>
