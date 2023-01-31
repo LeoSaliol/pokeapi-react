@@ -6,6 +6,7 @@ import SinglePagePokemon from "../pages/SinglePagePokemon";
 import { loaderPokemons } from "../components/CardPokemon";
 import { loaderPoke } from "../components/SinglePokemon";
 import TypesPokemons from "../components/TypesPokemons";
+import ListaPagePokemon, { loaderType } from "../pages/ListaPagePokemon";
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ export const router = createBrowserRouter([
                 path: "/pokemon/:id",
                 element: <SinglePagePokemon />,
                 loader: loaderPoke,
+            },
+            {
+                path: "/type/:type",
+                element: <ListaPagePokemon />,
+                loader: loaderType,
             },
         ],
     },

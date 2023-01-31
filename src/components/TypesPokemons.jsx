@@ -23,7 +23,11 @@ const TypesPokemons = ({ changeModal }) => {
             <section className="poke_type container-fluid">
                 <i className="bi bi-x-lg" onClick={changeModal}></i>
                 {types.map((t, i) => (
-                    <Link key={i} className={`poke_type-link ${t.name}`}>
+                    <Link
+                        key={i}
+                        to={`/type/${t.name}`}
+                        className={`poke_type-link ${t.name}`}
+                    >
                         {t.name}
                     </Link>
                 ))}
