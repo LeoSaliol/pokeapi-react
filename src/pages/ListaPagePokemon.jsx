@@ -1,23 +1,47 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, Link } from "react-router-dom";
 import TarjetaPokemon from "../components/Tarjeta/TarjetaPokemon";
+import TypesPokemons from "../components/TypesPokemons";
+
 import "../sass/types.scss";
+import "../sass/modal.scss";
 
 const ListaPagePokemon = () => {
-    const { types } = useLoaderData();
+    const { types, data } = useLoaderData();
     const [classType, setClassType] = useState("");
+    const [modal, setModal] = useState(false);
+
+    const changeModal = () => {
+        setModal(!modal);
+    };
     const typesClass = () => {
-        types.slice(0, 15).map((i) => setClassType(i.types[0].type.name));
+        setClassType(data.name);
     };
     useEffect(() => {
         typesClass();
-    });
+    }, [typesClass]);
 
     return (
         <>
-            <Link className={`back ${classType} `} to={"/"}>
-                <i className="bi bi-arrow-left-circle"></i>
-            </Link>
+            <div className="back">
+                <Link className={`back_button ${classType} `} to={"/"}>
+                    <i className="bi bi-arrow-left-circle"></i>
+                </Link>
+                <button
+                    onClick={changeModal}
+                    className={`back_text ${classType}`}
+                >
+                    {" "}
+                    {classType}
+                </button>
+            </div>
+
+            {modal && (
+                <>
+                    <span className="modal-back" onClick={changeModal}></span>
+                    <TypesPokemons changeModal={changeModal} />
+                </>
+            )}
 
             <TarjetaPokemon poke={types.slice(0, 15)} />
         </>
@@ -37,5 +61,5 @@ export const loaderType = async ({ params }) => {
     });
 
     const types = await Promise.all(promises);
-    return { types };
+    return { types, data };
 };

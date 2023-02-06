@@ -27,6 +27,7 @@ const TypesPokemons = ({ changeModal }) => {
                         key={i}
                         to={`/type/${t.name}`}
                         className={`poke_type-link ${t.name}`}
+                        onClick={changeModal}
                     >
                         {t.name}
                     </Link>
