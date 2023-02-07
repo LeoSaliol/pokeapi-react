@@ -5,6 +5,7 @@ import "../../sass/search.scss";
 const SearchPokemon = () => {
     const [namePoke, setNamePoke] = useState("");
     const [pokemon, setPokemon] = useState({});
+    const [valid, setValid] = useState(false);
     const navigate = useNavigate();
 
     const navigation = (id) => {
@@ -12,20 +13,29 @@ const SearchPokemon = () => {
     };
 
     const getPokemon = async (name) => {
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-        const data = await res.json();
+        try {
+            const res = await fetch(
+                `https://pokeapi.co/api/v2/pokemon/${name}`
+            );
+            const data = await res.json();
 
-        setPokemon(data);
-        if (data.id) {
-            navigation(data.id);
+            setPokemon(data);
+            if (data.id) {
+                navigation(data.id);
+            }
+            setValid(false);
+        } catch (error) {
+            setValid(true);
         }
     };
 
     const getName = (e) => {
         e.preventDefault();
         getPokemon(namePoke.toLowerCase());
-
         setNamePoke("");
+        if (valid === true) {
+            e.target.reset();
+        }
     };
     return (
         <div>
@@ -40,6 +50,14 @@ const SearchPokemon = () => {
                 />
                 <i className="bi bi-search" onClick={(e) => getName(e)}></i>
             </form>
+            {valid && (
+                <div
+                    className="alert alert-danger w-25 mx-auto my-3  "
+                    role="alert"
+                >
+                    Pokemon not found
+                </div>
+            )}
         </div>
     );
 };
