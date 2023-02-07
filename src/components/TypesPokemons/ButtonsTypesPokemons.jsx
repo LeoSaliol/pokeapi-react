@@ -1,7 +1,7 @@
 import { useState } from "react";
-import TypesPokemons from "../components/TypesPokemons";
-import "../sass/modal.scss";
-const TypesPagesPokemons = () => {
+import TypesPokemons from "./TypesPokemons";
+import "../../sass/modal.scss";
+const ButtonsTypesPokemons = () => {
     const [modal, setModal] = useState(false);
     const changeModal = () => {
         setModal(!modal);
@@ -19,4 +19,4 @@ const TypesPagesPokemons = () => {
     );
 };
 
-export default TypesPagesPokemons;
+export default ButtonsTypesPokemons;

@@ -2,7 +2,7 @@ import "../../sass/card.scss";
 
 import { Link } from "react-router-dom";
 
-const TarjetaPokemon = ({ poke }) => {
+const CardPokemon = ({ poke }) => {
     return (
         <div className="d-flex gap-5 flex-wrap justify-content-center">
             {poke.length > 0 ? (
@@ -40,4 +40,4 @@ const TarjetaPokemon = ({ poke }) => {
     );
 };
 
-export default TarjetaPokemon;
+export default CardPokemon;

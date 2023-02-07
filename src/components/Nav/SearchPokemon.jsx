@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../sass/search.scss";
+import "../../sass/search.scss";
 
 const SearchPokemon = () => {
     const [namePoke, setNamePoke] = useState("");

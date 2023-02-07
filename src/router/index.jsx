@@ -3,9 +3,9 @@ import LayoutPublic from "../layout/LayoutPublic";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/Home";
 import SinglePagePokemon from "../pages/SinglePagePokemon";
-import { loaderPokemons } from "../components/CardPokemon";
-import { loaderPoke } from "../components/SinglePokemon";
-import TypesPokemons from "../components/TypesPokemons";
+import { loaderPokemons } from "../components/CardsPokemon/CardsListPokemon";
+import { loaderPoke } from "../components/SinglePokemon/SinglePokemon";
+
 import ListaPagePokemon, { loaderType } from "../pages/ListaPagePokemon";
 
 export const router = createBrowserRouter([

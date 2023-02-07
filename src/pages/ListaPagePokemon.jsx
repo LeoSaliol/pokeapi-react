@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, Link } from "react-router-dom";
-import TarjetaPokemon from "../components/Tarjeta/TarjetaPokemon";
-import TypesPokemons from "../components/TypesPokemons";
+
+import CardPokemon from "../components/CardsPokemon/CardPokemon";
+import TypesPokemons from "../components/TypesPokemons/TypesPokemons";
 
 import "../sass/types.scss";
 import "../sass/modal.scss";
@@ -43,7 +44,7 @@ const ListaPagePokemon = () => {
                 </>
             )}
 
-            <TarjetaPokemon poke={types.slice(0, 15)} />
+            <CardPokemon poke={types.slice(0, 15)} />
         </>
     );
 };

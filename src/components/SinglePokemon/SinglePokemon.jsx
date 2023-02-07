@@ -1,4 +1,4 @@
-import "../sass/single.scss";
+import "../../sass/single.scss";
 import { Link } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 

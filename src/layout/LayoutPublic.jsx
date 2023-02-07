@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
-import Logo from "../components/Logo";
+import Footer from "../components/Footer/Footer";
+import Logo from "../components/Nav/Logo";
 
-import SearchPokemon from "../components/SearchPokemon";
+import SearchPokemon from "../components/Nav/SearchPokemon";
 
 import "../sass/index.scss";
 const LayoutPublic = () => {

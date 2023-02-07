@@ -1,15 +1,16 @@
 import { useLoaderData } from "react-router-dom";
-import TarjetaPokemon from "./Tarjeta/TarjetaPokemon";
+import CardPokemon from "./CardPokemon";
 
-export const CardPokemon = () => {
+export const CardsListPokemon = () => {
     const { pokemons } = useLoaderData();
 
     return (
         <>
-            <TarjetaPokemon poke={pokemons} />
+            <CardPokemon poke={pokemons} />
         </>
     );
 };
+export default CardsListPokemon;
 
 export const loaderPokemons = async () => {
     const res = await fetch(

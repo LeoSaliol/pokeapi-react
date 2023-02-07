@@ -1,4 +1,4 @@
-import "../sass/types.scss";
+import "../../sass/types.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 

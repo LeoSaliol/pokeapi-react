@@ -1,13 +1,13 @@
-import { CardPokemon } from "../components/CardPokemon";
-import TypesPagesPokemons from "./TypesPagesPokemons";
+import CardsListPokemon from "../components/CardsPokemon/CardsListPokemon";
+import ButtonsTypesPokemons from "../components/TypesPokemons/ButtonsTypesPokemons";
 
 const Home = () => {
     return (
         <>
-            <TypesPagesPokemons />
+            <ButtonsTypesPokemons />
 
             <div className="container ">
-                <CardPokemon />
+                <CardsListPokemon />
             </div>
         </>
     );

@@ -1,4 +1,4 @@
-import SinglePokemon from "../components/SinglePokemon";
+import SinglePokemon from "../components/SinglePokemon/SinglePokemon";
 export const SinglePagePokemon = () => {
     return (
         <>

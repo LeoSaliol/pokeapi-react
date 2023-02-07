@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import LogoPokemon from "../assets/pngegg.png";
-import "../sass/logo.scss";
+import LogoPokemon from "../../assets/pngegg.png";
+import "../../sass/logo.scss";
 
 const Logo = () => {
     return (
