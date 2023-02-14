@@ -30,7 +30,7 @@ const ListaPagePokemon = () => {
                 </Link>
                 <button
                     onClick={changeModal}
-                    className={`back_text ${classType}`}
+                    className={`back_text ${classType} `}
                 >
                     {" "}
                     {classType}

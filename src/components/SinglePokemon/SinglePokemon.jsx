@@ -75,9 +75,6 @@ export const SinglePokemon = () => {
                     </div>
                 </div>
             </article>
-            <Link to="/" className="home">
-                <i className="bi bi-house-door-fill"></i>
-            </Link>
         </>
     );
 };

@@ -7,8 +7,10 @@ const ButtonsTypesPokemons = () => {
         setModal(!modal);
     };
     return (
-        <div className="container-fluid ">
-            <button onClick={changeModal}>TYPES</button>
+        <div className="container text-center mt-4  ">
+            <button className="btn btn-warning" onClick={changeModal}>
+                TYPES
+            </button>
             {modal && (
                 <>
                     <span className="modal-back" onClick={changeModal}></span>

@@ -7,7 +7,11 @@ const CardPokemon = ({ poke }) => {
         <div className="d-flex gap-5 flex-wrap justify-content-center">
             {poke.length > 0 ? (
                 poke.map((pok) => (
-                    <div key={pok.id} className="card-poke">
+                    <Link
+                        key={pok.id}
+                        className="card-poke"
+                        to={`/pokemon/${pok.id}`}
+                    >
                         <h3 className="card-poke_title"> {pok.name} </h3>
                         <p className="card-poke_number"># {pok.id} </p>
 
@@ -17,10 +21,7 @@ const CardPokemon = ({ poke }) => {
                             alt="Pokemons"
                         />
 
-                        <Link
-                            to={`/pokemon/${pok.id}`}
-                            className={`card-poke_button `}
-                        >
+                        <button className={`card-poke_button `}>
                             {pok.types.map((i) => (
                                 <p
                                     key={i.slot}
@@ -30,8 +31,8 @@ const CardPokemon = ({ poke }) => {
                                     {i.type.name}{" "}
                                 </p>
                             ))}
-                        </Link>
-                    </div>
+                        </button>
+                    </Link>
                 ))
             ) : (
                 <h2>Not Pokemons</h2>
