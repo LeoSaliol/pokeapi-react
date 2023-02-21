@@ -1,16 +1,22 @@
 import "../../sass/single.scss";
+
 import { Link } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export const SinglePokemon = () => {
     const { pokemon } = useLoaderData();
+    const type = pokemon.types[0].type.name;
+
     return (
         <>
+            <Link className={`back_button ${type} `} to={-1}>
+                <i className="bi bi-arrow-left-circle"></i>
+            </Link>
             <motion.article
-                initial={{ y: 150, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ ease: "easeOut", duration: 2.5 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ ease: "easeIn", duration: 1.5 }}
                 exit={{ opacity: 0 }}
                 className="d-flex gap-5 flex-wrap justify-content-center"
             >

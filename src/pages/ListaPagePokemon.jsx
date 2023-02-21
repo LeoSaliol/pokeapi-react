@@ -25,7 +25,7 @@ const ListaPagePokemon = () => {
     return (
         <>
             <div className="back">
-                <Link className={`back_button ${classType} `} to={"/"}>
+                <Link className={`back_button ${classType} `} to={-1}>
                     <i className="bi bi-arrow-left-circle"></i>
                 </Link>
                 <button

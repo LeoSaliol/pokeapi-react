@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useNavigation } from "react-router-dom";
 import "../../sass/search.scss";
 
 const SearchPokemon = () => {
@@ -7,6 +7,7 @@ const SearchPokemon = () => {
     const [pokemon, setPokemon] = useState({});
     const [valid, setValid] = useState(false);
     const navigate = useNavigate();
+    const navigatio = useNavigation();
 
     const navigation = (id) => {
         navigate(`/pokemon/${id} `);
@@ -30,11 +31,9 @@ const SearchPokemon = () => {
     };
 
     const getName = (e) => {
-        e.preventDefault();
         getPokemon(namePoke.toLowerCase());
         setNamePoke("");
         if (valid === true) {
-            e.target.reset();
         }
     };
     return (
@@ -45,11 +44,15 @@ const SearchPokemon = () => {
             >
                 <input
                     type="text"
-                    placeholder="Find Pokemon"
+                    placeholder="Find Pokemon..."
                     onChange={(e) => setNamePoke(e.target.value)}
+                    value={namePoke}
                 />
                 <i className="bi bi-search" onClick={(e) => getName(e)}></i>
             </form>
+            {navigatio.state === "submitting" && (
+                <div className="alert alert-danger">Enviando</div>
+            )}
             {valid && (
                 <div
                     className="alert alert-danger w-25 mx-auto my-3  "

@@ -1,39 +1,43 @@
-@use 'variables' as v;
-@use 'buttons';
-.single-poke{
+@use "variables" as v;
+@use "buttons";
+.back_button {
+    background-color: transparent;
+    i {
+        background-color: transparent;
+    }
+}
+.single-poke {
     margin-top: 2rem;
     width: 50rem;
     height: 32rem;
     border-radius: 35px;
-    background-color: v.$Card ;
+    background-color: v.$Card;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px ;
-    @media((min-width: 551px ) and (max-width: 853px)){
-      
-     width: 35rem;          
+    padding: 25px;
+    @media ((min-width: 551px ) and (max-width: 853px)) {
+        width: 35rem;
     }
-    @media(max-width: 480px){
+    @media (max-width: 480px) {
         padding: 9px 1px;
         width: 20rem;
-        
     }
-    
-    &_nav{
+
+    &_nav {
         width: 95%;
         display: flex;
-        background-color: v.$Card ;
+        background-color: v.$Card;
         margin-bottom: 25px;
         justify-content: space-between;
         align-items: center;
-        @media(max-width: 480px){
-        background-color: transparent;
-        display: flex;
-        flex-direction: column;
+        @media (max-width: 480px) {
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+        }
     }
-    }
-    &_type{
+    &_type {
         width: 17.5rem;
         display: flex;
         justify-content: center;
@@ -46,59 +50,49 @@
         border-radius: 15px;
         text-transform: capitalize;
         letter-spacing: 3px;
-        &-text{
+        &-text {
             width: 100%;
             margin-bottom: 0;
             padding: 15px 0px;
             text-decoration: none;
-        
-        @media(max-width: 550px){
-            
-            padding: 10px 0px;
+
+            @media (max-width: 550px) {
+                padding: 10px 0px;
+            }
+            @media (max-width: 480px) {
+                padding: 5px;
+            }
         }
-        @media(max-width: 480px){
-            padding: 5px;
-           
+        @media (max-width: 550px) {
+            width: 15rem;
+            margin-top: 0;
         }
-            
-        }
-        @media(max-width: 550px){
-                width: 15rem;
-                margin-top: 0;
-        }
-        @media(max-width: 480px){
+        @media (max-width: 480px) {
             width: 12rem;
             font-size: 1em;
-           
         }
-        
-        
     }
-    &_name{
-    background-color: v.$Card ;
-    color: v.$White;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: capitalize;
-    margin-top: 20px;
-    @media(max-width: 550px){
-        margin-top: 10px;
+    &_name {
+        background-color: v.$Card;
+        color: v.$White;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: capitalize;
+        margin-top: 20px;
+        @media (max-width: 550px) {
+            margin-top: 10px;
+        }
+        @media (max-width: 480px) {
+            font-size: 1.2em;
+        }
     }
-    @media(max-width: 480px){
-        font-size: 1.2em;
-        
+    &_number {
+        background-color: v.$Card;
+        color: #8e8e8f;
+        letter-spacing: 4px;
+        font-size: 1.1em;
     }
-
-    
-    }
-    &_number{
-    background-color: v.$Card ;
-    color: #8e8e8f;
-    letter-spacing: 4px;
-    font-size: 1.1em;
-
-    }
-    &_body{
+    &_body {
         background-color: v.$Card;
         width: 100%;
         height: 65%;
@@ -106,35 +100,31 @@
         gap: 6rem;
         align-items: center;
         justify-content: space-evenly;
-        @media(max-width: 550px){
+        @media (max-width: 550px) {
             flex-direction: column;
             gap: 2rem;
         }
-        @media((min-width: 551px ) and (max-width: 853px)){
-                gap: 1.5rem;
+        @media ((min-width: 551px ) and (max-width: 853px)) {
+            gap: 1.5rem;
         }
-        &-img{
+        &-img {
             max-width: 17rem;
             max-height: 24rem;
             background-color: transparent;
-            
-            padding-top: 5px;
-            @media(max-width: 550px){
-                max-width: 10rem;
-                padding-top: 50px;
-                max-height: 13rem;
 
+            padding-top: 5px;
+            @media (max-width: 550px) {
+                max-width: 10rem;
+                margin-top: 50px;
+                max-height: 13rem;
             }
-            
         }
     }
-   
-    &_details{
+
+    &_details {
         background-color: transparent;
         letter-spacing: 1px;
-       
-       
-        
+
         &-abilitys {
             background-color: transparent;
             margin: 0;
@@ -143,31 +133,26 @@
             text-align: center;
             gap: 15px;
 
-            
-            span{
-            background-color: transparent;
-            
+            span {
+                background-color: transparent;
+            }
+            h4 {
+                background-color: transparent;
+                font-size: 1.8em;
+                font-weight: 600;
+                margin-bottom: -6px;
+            }
+            li {
+                list-style: none;
 
-            }
-            h4{
-            background-color: transparent;
-            font-size: 1.8em;
-            font-weight: 600;
-            margin-bottom: -6px;
-            }
-            li{
-            list-style: none;
-            
-            font-size: 1.1em;
-            
-            padding: 1px;
-            border-radius: 10px;
-    text-transform: capitalize;
+                font-size: 1.1em;
 
+                padding: 1px;
+                border-radius: 10px;
+                text-transform: capitalize;
             }
-            
         }
-        &-stats{
+        &-stats {
             margin-top: 45px;
             background-color: transparent;
             text-align: center;
@@ -176,62 +161,26 @@
             gap: 2px;
             padding-right: 12px;
 
-            @media(max-width: 550px){
+            @media (max-width: 550px) {
                 gap: 0;
                 margin-top: 0;
                 padding-top: 1px;
                 padding-bottom: 15px;
             }
-            p, span, div{
-            
-            background-color: transparent;
-            margin: 0;
-            padding-left: 15px;
+            p,
+            span,
+            div {
+                background-color: transparent;
+                margin: 0;
+                padding-left: 15px;
             }
-            p{
+            p {
                 font-size: 1.8em;
             }
-            span{
+            span {
                 font-size: 1.5em;
                 font-weight: 400;
-                
-                
             }
-            
         }
-    
-    }
-    
-    
-}
-.home {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    border: none;
-    background-color: transparent;
-
-    i{
-    font-size: 50px;
-    background-color: transparent;
-    color: #e0e1da;
-    }
-    @media(max-width: 550px){
-        top: 2%;
-        left: 3%;
-     i{
-        font-size: 32px;
-    
-        
-     }           
-    }
-
-    @media((min-width: 551px ) and (max-width: 853px)){
-        top: 2%;
-        left: 3%;
-    i{
-        font-size: 35px;
-    }
     }
 }
-
