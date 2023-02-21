@@ -1,14 +1,16 @@
 import CardsListPokemon from "../components/CardsPokemon/CardsListPokemon";
 import ButtonsTypesPokemons from "../components/TypesPokemons/ButtonsTypesPokemons";
+import { AnimatePresence } from "framer-motion";
 
 const Home = () => {
     return (
         <>
             <ButtonsTypesPokemons />
-
-            <div className="container ">
-                <CardsListPokemon />
-            </div>
+            <AnimatePresence>
+                <div className="container ">
+                    <CardsListPokemon />
+                </div>
+            </AnimatePresence>
         </>
     );
 };

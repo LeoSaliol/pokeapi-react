@@ -1,108 +1,100 @@
-@use 'variables' as v ;
-@use 'buttons';
-.poke_type{
+@use "variables" as v;
+@use "buttons";
+.poke_type {
     position: fixed;
-    top: calc( 50% - 16rem );
-    left: calc( 50% - 30rem );
+    top: calc(50% - 16rem);
+    left: calc(50% - 30rem);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     width: 60rem;
-    height:32rem;
+    height: 32rem;
     gap: 15px;
     background-color: v.$Card;
     text-transform: capitalize;
     border-radius: 15px;
-    
-    @media(max-width:774px){
+
+    @media (max-width: 774px) {
         width: 22rem;
         height: 40rem;
         top: calc(50% - 21rem);
         left: calc(50% - 11rem);
     }
-    @media((min-width:775px) and (max-width: 1073px) ){
+    @media ((min-width: 775px) and (max-width: 1073px)) {
         width: 42rem;
         height: 40rem;
         top: calc(50% - 20rem);
         left: calc(50% - 22rem);
     }
-    i{
+    i {
         position: absolute;
         top: -50px;
         left: 10px;
         color: v.$White;
         background-color: transparent;
-        
     }
-    &-link{
-
+    &-link {
         font-size: 1.5em;
         text-decoration: none;
-        width: 10rem;  
+        width: 10rem;
         height: 5rem;
         border-radius: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        @media(max-width:774px){
+        @media (max-width: 774px) {
             font-size: 1.1em;
             width: 5rem;
             height: 3rem;
         }
-        @media((min-width:775px) and (max-width: 1073px) ){
-        font-size: 1.3em;
-        width: 9rem;
+        @media ((min-width: 775px) and (max-width: 1073px)) {
+            font-size: 1.3em;
+            width: 9rem;
         }
     }
 }
 
-.back{
-    
+.back {
     // position: absolute;
     // top: 3rem;
     // left: 2rem;
-    
+
     display: flex;
     // gap: 4.5rem;
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
-    &_button{
-        
-        // width: 0;
-        
+    &_button {
+        position: fixed;
+        top: 5px;
+        left: 5px;
     }
-    &_text{
-    margin-bottom: 6px;
-       margin-top: 0;
-       padding: 15px 20px;
-       border-radius: 15px;
-       text-transform: capitalize;
-       font-weight: 600;
-       letter-spacing: 2px;
-    text-decoration: none;
-    border: none;
-
+    &_text {
+        margin-bottom: 6px;
+        margin-top: 0;
+        padding: 15px 20px;
+        border-radius: 15px;
+        text-transform: capitalize;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-decoration: none;
+        border: none;
     }
-    i{
-       background-color: transparent;
-       font-size: 3rem;
-       position: absolute;
-       top: 5px;
-       left: 10px;
+    i {
+        background-color: transparent;
+        font-size: 3rem;
+        position: absolute;
+        top: 5px;
+        left: 10px;
     }
-    @media(max-width:774px){
+    @media (max-width: 774px) {
         top: 0.5rem;
         left: 1rem;
-        
-       
-        i{
-            
+
+        i {
             background-color: transparent;
             font-size: 2rem;
-    
-
-         }
+        }
     }
 }

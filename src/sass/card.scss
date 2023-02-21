@@ -1,9 +1,13 @@
 @use "variables" as v;
 @use "buttons";
+.motion {
+    background-color: transparent;
+    margin-top: 5px;
+}
 .card-poke {
     margin-top: 2rem;
-    max-width: 25rem;
-    max-height: 32rem;
+    width: 18rem;
+    height: 30rem;
     border-radius: 35px;
     background-color: v.$Card;
     text-decoration: none;

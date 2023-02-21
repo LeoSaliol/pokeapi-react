@@ -1,12 +1,19 @@
 import "../../sass/single.scss";
 import { Link } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const SinglePokemon = () => {
     const { pokemon } = useLoaderData();
     return (
         <>
-            <article className="d-flex gap-5 flex-wrap justify-content-center">
+            <motion.article
+                initial={{ y: 150, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ ease: "easeOut", duration: 2.5 }}
+                exit={{ opacity: 0 }}
+                className="d-flex gap-5 flex-wrap justify-content-center"
+            >
                 <div className="single-poke">
                     <div className="single-poke_nav">
                         {/* //? Pokemon NAME */}
@@ -74,7 +81,7 @@ export const SinglePokemon = () => {
                         </div>
                     </div>
                 </div>
-            </article>
+            </motion.article>
         </>
     );
 };
