@@ -1,11 +1,11 @@
-import { Outlet, useNavigation } from "react-router-dom";
-import Footer from "../components/Footer/Footer";
-import Loading from "../components/Loading/Loading";
-import Logo from "../components/Nav/Logo";
+import { Outlet, useNavigation } from 'react-router-dom';
+import Footer from '../components/Footer/Footer';
+import Loading from '../components/Loading/Loading';
+import Logo from '../components/Nav/Logo';
 
-import SearchPokemon from "../components/Nav/SearchPokemon";
+import SearchPokemon from '../components/Nav/SearchPokemon';
 
-import "../sass/index.scss";
+import '../sass/index.scss';
 
 const LayoutPublic = () => {
     const navigation = useNavigation();
@@ -17,7 +17,7 @@ const LayoutPublic = () => {
                 <SearchPokemon />
             </div>
             <section>
-                {navigation.state === "loading" ? <Loading /> : <Outlet />}
+                {navigation.state === 'loading' ? <Loading /> : <Outlet />}
             </section>
             <Footer />
         </>
