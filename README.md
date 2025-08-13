@@ -3,4 +3,4 @@
 ### Skills used: Vite, React, Frame Motion, Bootstrap y Sass
 
 ### Deploy 
-https://listadopokemon.netlify.app/
+https://pokeapi-react-chi.vercel.app/
